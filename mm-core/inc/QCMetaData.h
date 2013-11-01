@@ -60,7 +60,6 @@ enum {
 
     //Extractor sets this
     kKeyUseArbitraryMode     = 'ArbM',  //bool (int32_t)
-
     kKeySmoothStreaming      = 'ESmS',  //bool (int32_t)
     kKeyHFR                  = 'hfr ',  // int32_t
 };
@@ -77,6 +76,11 @@ enum {
     kTypeWMALossLess,
 };
 
+//This enum should be keep in sync with "enum Flags" in MediaExtractor.h in AOSP,
+//Value should reflect as last entry in the enum
+enum {
+    CAN_SEEK_TO_ZERO   = 16, // the "previous button"
+};
 }  // namespace android
 
 #endif  // QC_META_DATA_H_

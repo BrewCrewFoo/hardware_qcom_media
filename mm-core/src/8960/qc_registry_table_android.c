@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------
-Copyright (c) 2011-2013, The Linux Foundation. All rights reserved.
+Copyright (c) 2011, The Linux Foundation. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -44,38 +44,6 @@ omx_core_cb_type core[] =
     "OMX.qcom.video.decoder.avc",
     NULL, // Create instance function
     // Unique instance handle
-    {
-      NULL,
-      NULL,
-      NULL,
-      NULL
-    },
-    NULL,   // Shared object library handle
-    "libOmxVdec.so",
-    {
-      "video_decoder.avc"
-    }
-  },
-  {
-    "OMX.qcom.video.decoder.avc.smoothstreaming",
-    NULL, // Create instance function
-    //  Unique instance handle
-    {
-      NULL,
-      NULL,
-      NULL,
-      NULL
-    },
-    NULL,   // Shared object library handle
-    "libOmxVdec.so",
-    {
-      "video_decoder.avc"
-    }
-  },
-  {
-    "OMX.qcom.video.decoder.avc.smoothstreaming.secure",
-    NULL, // Create instance function
-    //  Unique instance handle
     {
       NULL,
       NULL,
@@ -201,6 +169,22 @@ omx_core_cb_type core[] =
     }
   },
   {
+    "OMX.qcom.video.decoder.mpeg2.secure",
+    NULL, // Create instance function
+    // Unique instance handle
+    {
+      NULL,
+      NULL,
+      NULL,
+      NULL
+    },
+    NULL,   // Shared object library handle
+    "libOmxVdec.so",
+    {
+      "video_decoder.mpeg2"
+    }
+  },
+  {
     "OMX.qcom.video.decoder.vc1",
     NULL, // Create instance function
     // Unique instance handle
@@ -282,22 +266,6 @@ omx_core_cb_type core[] =
   },
    {
     "OMX.qcom.video.encoder.avc",
-    NULL, // Create instance function
-    // Unique instance handle
-    {
-      NULL,
-      NULL,
-      NULL,
-      NULL
-    },
-    NULL,   // Shared object library handle
-    "libOmxVenc.so",
-    {
-      "video_encoder.avc"
-    }
-  },
-  {
-    "OMX.qcom.video.encoder.avc.secure",
     NULL, // Create instance function
     // Unique instance handle
     {
@@ -521,7 +489,7 @@ omx_core_cb_type core[] =
     }
   },
   {
-    "drm.play",
+    "AIV.play",
     NULL, // Create instance function
     // Unique instance handle
     {
@@ -531,9 +499,9 @@ omx_core_cb_type core[] =
       NULL
     },
     NULL,  // Shared object library handle
-    "libDrmPlay.so",
+    "libAivPlay.so",
     {
-      "drm.play"
+      "AIV.play.101"
     }
   },
   {
